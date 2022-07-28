@@ -1,0 +1,83 @@
+.link1{
+    color: gray;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #4180ff;
+    float: left;
+    margin-left: 10rem;
+}
+button{
+    border-radius: 30px;
+    background-color: #4180ff;
+    color: white;
+    border: none;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    padding: 4px;
+    /* float: right; */
+    margin-right: 6rem;
+
+}
+p{
+    float: right;
+    margin-right: 1rem;
+}
+
+.side-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+span{
+    font-weight: bold;
+}
+
+input{
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 25px;
+    background-color: #f5f7ff;
+    margin-right: 10rem;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+@media screen and (max-width: 457px){
+    .main-div{
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .side-main{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+    }
+    p{
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    .side-main button{
+        margin-left: 5rem;
+        margin-right: 0;
+        padding: 4px;
+        font-size: 17px;
+        margin-top: 1rem;
+    }
+    .side-main input{
+        margin: 1rem 0;
+    }
+    .link1{
+        display: none;
+    }
+}
