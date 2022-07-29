@@ -1,12 +1,14 @@
-.link1{
+.link1 {
     color: gray;
     text-decoration: none;
-    font-size: 1.3rem;
     border-bottom: 2px solid #4180ff;
     float: left;
-    margin-left: 10rem;
+    margin-left: 5rem;
+    font-size: 14px;
+    margin-top: 1rem;
 }
-button{
+
+button {
     border-radius: 30px;
     background-color: #4180ff;
     color: white;
@@ -18,66 +20,98 @@ button{
     padding: 4px;
     /* float: right; */
     margin-right: 6rem;
+    margin-top: 0.5rem;
 
 }
-p{
+
+p {
     float: right;
     margin-right: 1rem;
+    margin-top: 0.7rem;
 }
 
-.side-main{
+.side-main {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    margin-right: 5rem;
 }
 
-span{
+span {
     font-weight: bold;
 }
 
-input{
-    outline: none;
-    border: none;
-    width: 40px;
-    height: 25px;
-    background-color: #f5f7ff;
-    margin-right: 10rem;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {  
-
-   opacity: 1;
-
+.counter {
+    display: flex;
+    flex-direction: column;
 }
 
-@media screen and (max-width: 457px){
-    .main-div{
+.count {
+    height: 1rem;
+}
+
+.count:hover {
+    cursor: pointer;
+}
+
+.display-count {
+    float: left;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.counter-main {
+    margin-right: 1rem;
+    margin-top: 0.3;
+}
+
+/*  media query for moble responsive(iphone SE) */
+@media screen and (max-width: 457px) {
+    .main-div {
         max-height: 80vh;
         overflow-y: auto;
     }
-    .side-main{
+
+    .side-main {
         display: flex;
         flex-direction: row;
         position: fixed;
         bottom: 0;
+        height: 5rem;
         background-color: white;
     }
-    p{
-        margin-left: 1rem;
-        margin-top: 1rem;
+
+    .price {
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+        font-size: 1rem;
+        width: 143px;
     }
-    .side-main button{
-        margin-left: 5rem;
-        margin-right: 0;
+
+    .side-main button {
+        margin-left: 3rem;
         padding: 4px;
         font-size: 17px;
-        margin-top: 1rem;
+        margin-top: 2.3rem;
     }
-    .side-main input{
+
+    .side-main input {
         margin: 1rem 0;
     }
-    .link1{
+
+    .link1 {
         display: none;
+    }
+
+    .counter-main {
+        height: 2.3rem;
+        margin-top: 2rem;
+    }
+
+    .display-count {
+        font-size: 1rem;
+        width: 0%;
     }
 }

@@ -6,6 +6,7 @@ export const products = createSlice({
     name: 'products',
     initialState: initialState,
     reducers: {
+        // reducer for increaing amount of product
         incrementCount: (state) => {
             state.price += 299
         },
@@ -13,6 +14,7 @@ export const products = createSlice({
             state.price -= 299
         }
     },
+    // extra reducer for storing fetch data to initial state
     extraReducers: (builder) => {
         builder.addCase(getProduct.fulfilled, (state,payload) => {
             state.products_data = payload.payload
