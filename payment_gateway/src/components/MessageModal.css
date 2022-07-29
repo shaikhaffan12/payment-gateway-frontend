@@ -1,6 +1,26 @@
+.modelBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    border: 2px solid white;
+}
 
-@media screen and (max-width: 457px) {
-    .modal-content{
-        width: 300px;
+#modal-modal-title{
+    text-align: center;
+}
+
+/* Apply Media Query When screen width is 440px */
+
+@media screen and (max-width:457px) {
+    .modelBox{
+        width: 80%;
+    }
+    p{
+        width: auto;
+    }
+    #modal-modal-title{
+        font-size: 1.5rem;
     }
 }

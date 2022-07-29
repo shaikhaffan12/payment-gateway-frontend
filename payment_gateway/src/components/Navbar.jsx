@@ -3,6 +3,8 @@ import 'bootstrap/dist/js/bootstrap.js';
 import './Navbar.css';
 import logo from '../images/image.png';
 
+// Bootstrap Navbar Component
+
 const Navbar = () => {
     return (
         <div>

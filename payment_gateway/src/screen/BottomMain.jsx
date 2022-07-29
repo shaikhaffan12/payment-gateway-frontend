@@ -6,15 +6,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getProduct } from '../app/redux/action';
 import ImageTransition from '../components/ImagesTransition';
-
+import { Link } from 'react-router-dom';
 const BottomMain = () => {
+
+    // Functionality for fetching the product from backend
+
     const dispatch = useDispatch()
+    //  fetch true or false in success variable
     const success = useSelector((state) => state.productreducer.productFetch)
+    //  fetch data from backend using redux in product state
     const product = useSelector((state) => state.productreducer.products_data)
+    //  useEffect function for fetch data from backend to redux state evry time when render 
+    // to this component
     useEffect(() => {
         dispatch(getProduct())
     }, [])
 
+    //  if product fetched then display the component 
     if (success) {
 
         return (
@@ -23,7 +31,7 @@ const BottomMain = () => {
                     <MainScreen />
                 </div>
                 <div className='main-div'>
-                    
+                    <div className="upper-div">
                     <div className='left mt-2'>
                         <div className='description'>
                         <a href="#" className = 'link2 float-left'>About Product</a>
@@ -31,63 +39,62 @@ const BottomMain = () => {
 
                             <h1 className='head mt-1'>{product.name}</h1>
 
+                            <p className= "middle-heading">It’s magic, remastered!</p>
+
+                            <div className= "main-content">
                             <ul className='para mt-2'>
                                 <li>
-                                    With Mic:Yes
+                                    Spatial audio with dynamic head tracking places sound all around you
                                 </li>
                                 <li>
-                                    Connector type: No
+                                    Adaptive EQ automatically tunes music to your ears
                                 </li>
                                 <li>
-                                    Bluetooth version: v5.0
+                                    All-new contoured design
                                 </li>
                                 <li>
-                                    Active Noise Cancellation for immersive sound
+                                    Force sensor lets you easily control your entertainment, answer or end calls, and more
                                 </li>
                                 <li>
-                                    More than 24 hours of total listening time with the MagSafe Charging Case
+                                    Sweat and water resistant
                                 </li>
                                 <li>
-                                    Transparency mode for hearing and interacting with the world around you
+                                    Up to 6 hours of listening time with one charge
                                 </li>
                                 <li>
-                                    Spatial audio with dynamic head tracking for theater-like sound that surrounds you
+                                    Up to 30 hours of total listening time with the MagSafe Charging Case
                                 </li>
                                 <li>
-                                    Adaptive EQ automatically tunes music to the shape of your ear
+                                    Quick access to Siri by saying “Hey Siri”
                                 </li>
                                 <li>
-                                    Three sizes of soft, tapered silicone tips for a customizable fit | Sweat and water resistant
+                                    Effortless setup, in-ear detection and automatic switching for a magical experience
+                                </li>
+                                <li>
+                                    Easily share audio between two sets of AirPods on your iPhone, iPad, iPod touch or Apple TV
                                 </li>
 
                             </ul>
+                            </div>
                             <p className='footer'>SKUD55I5AI</p>
                         </div>
+                    </div>
                     </div>
 
                     <div className='right mt-2'>
                         
-                        <div className=' imageslider'>
+                        <ImageTransition />
                         
-                            <div style={{ "textAlign": "center", "marginTop": "21rem" }}>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                                <span className="dot"></span>
-                            </div>
-                            
-                        </div>
-                        {/* <ImageTransition /> */}
                     </div>
                     
                 </div>
             </div>
         )
     }
+    // else display Nothing
     else
         return (
-            <div> nothing</div>
+            <div> Nothing</div>
         )
 
 }

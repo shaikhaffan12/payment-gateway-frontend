@@ -1,3 +1,5 @@
+
+// initial states for redux 
 export const initialState = {
     products_data: [],
     error : false,

@@ -1,18 +1,21 @@
+.upper-div{
+    position: absolute;
+    left: 0;
+}
+
 .left {
     background-color: #f5f7ff;
     height: 450px auto;
-    width: 50%;
-    float: left;
     border-top: 1px solid #f5f7ff;
     padding-right: 5px;
     text-align: left;
-    /* padding-bottom: 10rem; */
+    padding-left: 7rem;
 }
 
 .right {
     background-color: white;
     height: 450px;
-    width: 50%;
+    width: 52%;
     float: right;
     border: 1px solid #f5f7ff;
     display: grid;
@@ -20,7 +23,8 @@
 }
 
 .head {
-    font-size: 30px;
+    font-size: 22px;
+    margin-bottom: 0px;
     
 }
 .description{
@@ -32,57 +36,32 @@
 .heading{
     color: #cbcfd7;
     font-size: 12px;
+    margin-bottom: 0.5px;
 }
 .footer{
     font-size: 12px;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-/* image transition */
-
-.imageslider {
-    height: 71%;
-    width: 60%;
-    background-image: url('https://rukminim1.flixcart.com/image/416/416/kwdv3bk0/headphone/s/b/z/-original-imag92pgvvnbk3ys.jpeg?q=70');
-    background-size: 100% 100%;
-    animation: iamgeslide 7s linear infinite;
+.middle-heading{
+    width: 138px;
+    height: 18px;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
 }
 
-
-
-@keyframes iamgeslide {
-    0% {
-       background-image: url('https://rukminim1.flixcart.com/image/416/416/kwdv3bk0/headphone/c/e/v/-original-imag92pgxazrpwxf.jpeg?q=70');
-    }
-
-    25% {
-       background-image: url('https://rukminim1.flixcart.com/image/416/416/kwdv3bk0/headphone/f/s/e/-original-imag92pggqg9jbdg.jpeg?q=70');
-    }
-
-    50% {
-        background-image: url('https://rukminim1.flixcart.com/image/416/416/kwdv3bk0/headphone/5/9/2/-original-imag92pgraqqcg8u.jpeg?q=70');
-    }
-    75% {
-        background-image: url('https://rukminim1.flixcart.com/image/416/416/kwdv3bk0/headphone/s/b/z/-original-imag92pgvvnbk3ys.jpeg?q=70');
-    }
-
-    100% {
-        background-image: url('https://rukminim1.flixcart.com/image/416/416/kwdv3bk0/headphone/k/f/j/-original-imag92pgr5yttjez.jpeg?q=70');
-    }
+li{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active {
-    background-color: #717171;
-  }
+.main-content{
+    width: 467px; 
+    height: 312px;
+}
+
   .link2{
     float: left;
     color: gray;
@@ -91,7 +70,7 @@
     display: none;
   }
 
-  
+  /* media query for max width 457px (iphone SE only) */
 
   @media screen and (max-width: 457px){
     .main-div{
@@ -111,14 +90,7 @@
         height: 70vh;
         
     }
-    .dot{
-        margin-bottom: 3rem;
-    }
-    .imageslider{
-        width: 90%;
-        height: 60%;
-        margin-bottom: 30px;
-    }
+    
     .description{
         margin-left: 5%;
     }
@@ -126,4 +98,31 @@
         display: block;
         width: 7rem;
     }
+    .upper-div{
+        position: relative;
+
+    }
+    .left{
+        padding-left: 0%;
+        height: 94vh;
+    }
+    .main-content{
+        width: 100%;
+        height: 0%;
+    }
+    .middle-heading{
+        margin-top: 1.5rem;
+    }
+    li{
+        line-height: 21px;
+    }
   }
+
+
+
+  /* @media screen and (max-width: 414px){
+    .left{
+        height: 62vh;
+    }
+  } */
+
