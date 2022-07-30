@@ -1,39 +1,44 @@
-import BottomMain from './screen/BottomMain';
 import './App.css';
 import { useState, useEffect } from 'react';
 import MessageModal from './components/MessageModal';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-// import { Route, Routes } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import AboutProduct from './screen/AboutProduct';
+import { Routes, Route } from 'react-router-dom';
+import { HomeScreen } from './screen/HomeScreen';
 
 function App() {
   // functionality for modal after stripe session
   const[message, setMessage] = useState(false)
-  // const history = useNavigate()
+  const navigate = useNavigate()
 
   useEffect(() => {
-    const query = new URLSearchParams(window.location.search) 
-    if (query.get('success')){
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    if (query.get("success")) {
       setMessage(true)
+      query.delete("success");
+      navigate({ search: query.toString() }, { replace: true });
     }
-    if (query.get('cancel')){
+    if (query.get("cancel")) {
       setMessage(false)
+      query.delete("cancel");
+      navigate({ search: query.toString() }, { replace: true });
     }
-    // useNavigate.replace({
-    //   search : query.toString()
-    // })
-  }, [])
+  }, [navigate]);
 
   return (
     <>
     <div className="App container">
-      {/* <Routes> */}
-        {/* <Route path="/" component={<BottomMain />} />
-        <Route path="/messages" component={<MessageModal message = {message} setMessage = {setMessage}/>} /> */}
-      <BottomMain />
-      <MessageModal message = {message} setMessage = {setMessage}/>
-      {/* </Routes> */}
+      <Routes>
+        <Route path="" element={<HomeScreen />}/> 
+        <Route path="/messages" element={<MessageModal message = {message} setMessage = {setMessage}/>} />
+        <Route path="/about" element={<AboutProduct />}/>
+      {/* <BottomMain />
+      <MessageModal message = {message} setMessage = {setMessage}/> */}
+      </Routes>
+      
     </div>
     </>
   );

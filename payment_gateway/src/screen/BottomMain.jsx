@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getProduct } from '../app/redux/action';
 import ImageTransition from '../components/ImagesTransition';
-import { Link } from 'react-router-dom';
+
+
 const BottomMain = () => {
 
     // Functionality for fetching the product from backend

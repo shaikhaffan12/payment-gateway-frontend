@@ -5,7 +5,6 @@ const AboutProduct = () => {
     return (
         <>
         <div>
-        <MainScreen />
         <BottomMain />
         </div>
         </>
