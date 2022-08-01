@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getProduct } from '../app/redux/action';
 import ImageTransition from '../components/ImagesTransition';
-
+import Loader from '../components/Loader.jsx';
 
 const BottomMain = () => {
 
@@ -15,6 +15,8 @@ const BottomMain = () => {
     const dispatch = useDispatch()
     //  fetch true or false in success variable
     const success = useSelector((state) => state.productreducer.productFetch)
+    // show loading component
+    const loading = useSelector((state) => state.productreducer.loading)
     //  fetch data from backend using redux in product state
     const product = useSelector((state) => state.productreducer.products_data)
     //  useEffect function for fetch data from backend to redux state evry time when render 
@@ -22,6 +24,14 @@ const BottomMain = () => {
     useEffect(() => {
         dispatch(getProduct())
     }, [])
+
+    if(loading){
+        return(
+            <div>
+                <Loader />
+            </div>
+        )
+    }
 
     //  if product fetched then display the component 
     if (success) {

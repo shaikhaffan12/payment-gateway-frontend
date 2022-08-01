@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-// import Navbar from '../components/Navbar';
 import './MainScreen.css';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
@@ -36,9 +35,6 @@ const MainScreen = () => {
     }
     return(
         <div>
-            {/* <div >
-            <Navbar />
-            </div> */}
             <div className='mt-2'>
                 <Link to = '/about' className = 'link1 float-left'>About Product</Link>
                 <div className = 'side-main'>
@@ -55,7 +51,9 @@ const MainScreen = () => {
                 </div>
                 {/* calling stripe checkout session  using POST method pass product id and number of count */}
                 <form action={`${url}api/create-checkout-session/${product.id}/${count}`} method='POST'>
-                <button type='submit'>Buy Now</button>
+                <button type='submit'>
+                    Buy Now
+                </button>
                 </form>
                 </div>
                 
