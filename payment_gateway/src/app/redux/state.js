@@ -5,4 +5,5 @@ export const initialState = {
     error : false,
     productFetch: false,
     price: 299,
+    loading: false,
 }

@@ -47,7 +47,7 @@ export default function BasicModal(props) {
             <Typography id="modal-modal-title" variant="h$" component="h2">
               Purchase Successful
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2, textAlign: 'center', width: '80%' }}>
+            <Typography id="modal-modal-description" sx={{ mt: 2, textAlign: 'center', width: 'auto' }}>
               You Will Get Your Product Soon!
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2, textAlign: 'center' }}>

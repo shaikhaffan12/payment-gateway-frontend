@@ -7,6 +7,10 @@
     border: 2px solid white;
 }
 
+#modal-modal-description{
+    margin: 5px auto;
+}
+
 #modal-modal-title{
     text-align: center;
 }
@@ -17,7 +21,7 @@
     .modelBox{
         width: 80%;
     }
-    p{
+    #modal-modal-description{
         width: auto;
     }
     #modal-modal-title{
