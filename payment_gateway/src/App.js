@@ -31,12 +31,10 @@ function App() {
   return (
     <>
     <div className="App container">
+    <MessageModal message = {message} setMessage = {setMessage}/> 
       <Routes>
         <Route path="" element={<HomeScreen />}/> 
-        <Route path="/messages" element={<MessageModal message = {message} setMessage = {setMessage}/>} />
         <Route path="/about" element={<AboutProduct />}/>
-      {/* <BottomMain />
-      <MessageModal message = {message} setMessage = {setMessage}/> */}
       </Routes>
       
     </div>
