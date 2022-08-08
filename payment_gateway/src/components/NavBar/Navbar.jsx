@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import './Navbar.css';
-import logo from '../images/image.png';
+import logo from '../../assets/logo/image.png';
 
 // Bootstrap Navbar Component
 

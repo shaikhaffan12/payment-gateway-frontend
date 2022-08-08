@@ -1,4 +1,4 @@
-import BottomMain from "./BottomMain";
+import BottomMain from "../Child Components/BottomScreen/BottomMain";
 
 const AboutProduct = () => {
     return (

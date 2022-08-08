@@ -1,9 +1,11 @@
 
 // initial states for redux 
-export const initialState = {
+const initialState = {
     products_data: [],
     error : false,
     productFetch: false,
     price: 299,
     loading: false,
 }
+
+export default initialState;

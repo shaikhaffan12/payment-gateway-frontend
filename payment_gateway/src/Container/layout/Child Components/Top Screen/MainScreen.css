@@ -67,8 +67,8 @@ span {
     margin-top: 0.3;
 }
 
-/*  media query for moble responsive(iphone SE) */
-@media screen and (max-width: 457px) {
+/*  media query for tablates */
+@media screen and (max-width: 768px) {
     .main-div {
         max-height: 80vh;
         overflow-y: auto;
@@ -81,6 +81,62 @@ span {
         bottom: 0;
         height: 5rem;
         background-color: white;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .price {
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+        font-size: 1.5rem;
+        width: 180px;
+    }
+
+    .side-main button {
+        margin-left: 3rem;
+        padding: 7px;
+        font-size: 18px;
+        margin-top: 2rem;
+    }
+
+    .side-main input {
+        margin: 1rem 0;
+    }
+
+    .link1 {
+        display: none;
+    }
+
+    .counter-main {
+        height: 2.3rem;
+        margin-top: 2rem;
+    }
+
+    .display-count {
+        font-size: 1.5rem;
+        width: 0%;
+        margin-top: 0.1rem;
+    }
+    .count {
+        height: 1rem;
+    }
+}
+
+/* media query for mobiles */
+@media screen and (max-width: 425px) {
+    .main-div {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .side-main {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        width: 114%;
+        justify-content: center;
     }
 
     .price {
@@ -91,7 +147,7 @@ span {
     }
 
     .side-main button {
-        margin-left: 3rem;
+        margin-left: 2rem;
         padding: 4px;
         font-size: 17px;
         margin-top: 2.3rem;
@@ -113,5 +169,6 @@ span {
     .display-count {
         font-size: 1rem;
         width: 0%;
+        margin-top: 0.5rem;
     }
 }
