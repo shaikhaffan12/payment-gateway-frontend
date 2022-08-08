@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
-import BottomMain from "./BottomMain";
+import Navbar from "../../../components/NavBar/Navbar";
+import BottomMain from "../Child Components/BottomScreen/BottomMain";
 
 import React from 'react'
 

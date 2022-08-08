@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import './BottomMain.css';
-import MainScreen from './MainScreen';
+import '../BottomScreen/BottomMain.css';
+import MainScreen from '../Top Screen/MainScreen';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { getProduct } from '../app/redux/action';
-import ImageTransition from '../components/ImagesTransition';
-import Loader from '../components/Loader.jsx';
+import { getProduct } from '../../../../modules/Action/action';
+import ImageTransition from '../../../../components/Image Transition/ImagesTransition';
+import Loader from '../../../../components/Loader/Loader';
 
 const BottomMain = () => {
 
@@ -27,7 +27,7 @@ const BottomMain = () => {
 
     if(loading){
         return(
-            <div>
+            <div className= "main-loader">
                 <Loader />
             </div>
         )

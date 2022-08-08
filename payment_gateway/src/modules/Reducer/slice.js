@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './state';
-import { getProduct } from './action';
+import initialState from '../States/state';
+import { getProduct } from '../Action/action';
 
 export const products = createSlice({
     name: 'products',
